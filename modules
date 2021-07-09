@@ -1,6 +1,7 @@
 # This file allows specifying additional repositories to use
 # when building gluon.
 #
+# In most cases, it is not required so don't add it.
 
 ##	GLUON_SITE_FEEDS
 #		for each feed name given, add the corresponding PACKAGES_* lines
