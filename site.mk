@@ -14,6 +14,7 @@ GLUON_FEATURES := \
 	ebtables-limit-arp \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
+	mesh-wireless-sae \
 	respondd \
 	status-page \
 	web-advanced \
@@ -23,10 +24,17 @@ GLUON_FEATURES := \
 	web-private-wifi \
 	web-wizard
 
-GLUON_FEATURES_standard := \
-	mesh-wireless-sae
+# Raspberry Pi A/B/B+
+ifeq ($(GLUON_TARGET),brcm2708-bcm2708)
+GLUON_SITE_PACKAGES += \
+	kmod-ath9k-htc
+endif
 
-GLUON_FEATURES_tiny := \
+# Raspberry Pi 2
+ifeq ($(GLUON_TARGET),brcm2708-bcm2709)
+GLUON_SITE_PACKAGES += \
+	kmod-ath9k-htc
+endif
 
 ##	GLUON_SITE_PACKAGES
 #		Specify additional Gluon/OpenWrt packages to include here;
