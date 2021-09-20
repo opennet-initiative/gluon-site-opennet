@@ -30,14 +30,13 @@ GLUON_FEATURES := \
 #		selection that would be enabled by default or due to the
 #		chosen feature flags
 
-GLUON_SITE_PACKAGES := iwinfo
+GLUON_SITE_PACKAGES := iwinfo \
+	libustream-openssl \
+        ca-certificates
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
-GLUON_SITE_PACKAGES += \
-	kmod-ath9k-htc \
-	libustream-openssl \
-	ca-certificates
+GLUON_SITE_PACKAGES += kmod-ath9k-htc
 endif
 
 ##	DEFAULT_GLUON_RELEASE
