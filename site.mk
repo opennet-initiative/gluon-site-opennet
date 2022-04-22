@@ -1,4 +1,4 @@
-##	gluon site.mk
+##	gluon site.mk makefile
 
 ##	GLUON_FEATURES
 #		Specify Gluon features/packages to enable;
@@ -11,7 +11,6 @@ GLUON_FEATURES := \
 	autoupdater \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
-	ebtables-limit-arp \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
 	mesh-wireless-sae \
@@ -24,15 +23,19 @@ GLUON_FEATURES := \
 	web-private-wifi \
 	web-wizard
 
+GLUON_FEATURES_standard := \
+	wireless-encryption-wpa3
+
 ##	GLUON_SITE_PACKAGES
 #		Specify additional Gluon/OpenWrt packages to include here;
 #		A minus sign may be prepended to remove a packages from the
 #		selection that would be enabled by default or due to the
 #		chosen feature flags
 
-GLUON_SITE_PACKAGES := iwinfo \
+GLUON_SITE_PACKAGES := \
+	iwinfo \
 	libustream-openssl \
-        ca-certificates
+	ca-certificates
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
@@ -66,6 +69,3 @@ GLUON_REGION ?= eu
 
 # Languages to include
 GLUON_LANGS ?= en de
-
-# Do not build images for deprecated devices
-GLUON_DEPRECATED ?= 0
