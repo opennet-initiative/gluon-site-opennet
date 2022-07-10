@@ -16,6 +16,7 @@ GLUON_FEATURES := \
 	mesh-wireless-sae \
 	status-page \
 	web-advanced \
+	web-node-role \
 	web-wizard
 
 GLUON_FEATURES_standard := \
@@ -67,4 +68,4 @@ GLUON_PRIORITY ?= 0
 GLUON_REGION ?= eu
 
 # Languages to include
-GLUON_LANGS ?= de
+GLUON_LANGS ?= en de
