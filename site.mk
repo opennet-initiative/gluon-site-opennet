@@ -16,7 +16,6 @@ GLUON_FEATURES := \
 	mesh-wireless-sae \
 	status-page \
 	web-advanced \
-	web-node-role \
 	web-wizard
 
 GLUON_FEATURES_standard := \
