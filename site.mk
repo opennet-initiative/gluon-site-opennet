@@ -11,15 +11,16 @@ GLUON_FEATURES := \
 	autoupdater \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
+	ebtables-limit-arp \
 	mesh-batman-adv-15 \
-	mesh-vpn-core \
+	mesh-vpn-fastd \
+	respondd \
 	mesh-wireless-sae \
 	status-page \
 	web-advanced \
 	web-wizard
 
 GLUON_FEATURES_standard := \
-	mesh-vpn-fastd \
 	web-private-wifi \
 	wireless-encryption-wpa3
 
