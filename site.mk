@@ -20,9 +20,10 @@ GLUON_FEATURES := \
 	web-wizard
 
 GLUON_FEATURES_standard := \
-	mesh-wireless-sae \
-	web-private-wifi \
-	wireless-encryption-wpa3
+	web-private-wifi
+#	mesh-wireless-sae \
+#	web-private-wifi \
+#	wireless-encryption-wpa3
 
 ##	GLUON_SITE_PACKAGES
 #		Specify additional Gluon/OpenWrt packages to include here;
@@ -33,9 +34,8 @@ GLUON_FEATURES_standard := \
 GLUON_SITE_PACKAGES := iwinfo
 
 GLUON_SITE_PACKAGES_standard := \
+	ca-bundle \
 	libustream-wolfssl
-#	ca-bundle \
-#	libustream-wolfssl
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
