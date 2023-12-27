@@ -1,52 +1,5 @@
 ##	gluon site.mk makefile
 
-##	GLUON_FEATURES
-#		Specify Gluon features/packages to enable;
-#		Gluon will automatically enable a set of packages
-#		depending on the combination of features listed
-
-GLUON_FEATURES := \
-	alfred \
-	authorized-keys \
-	autoupdater \
-	ebtables-filter-multicast \
-	ebtables-filter-ra-dhcp \
-	ebtables-limit-arp \
-	mesh-batman-adv-15 \
-	mesh-vpn-fastd \
-	respondd \
-	status-page \
-	web-advanced \
-	web-wizard
-
-GLUON_FEATURES_standard := \
-	web-private-wifi
-#	mesh-wireless-sae \
-#	web-private-wifi \
-#	wireless-encryption-wpa3
-
-##	GLUON_SITE_PACKAGES
-#		Specify additional Gluon/OpenWrt packages to include here;
-#		A minus sign may be prepended to remove a packages from the
-#		selection that would be enabled by default or due to the
-#		chosen feature flags
-
-GLUON_SITE_PACKAGES := iwinfo
-
-GLUON_SITE_PACKAGES_standard := \
-	ca-bundle \
-	libustream-wolfssl
-
-# Raspberry Pi 2
-ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
-	TARGET_ROOTFS_PARTSIZE = 500
-
-	GLUON_SITE_PACKAGES += kmod-ath9k-htc \
-			       block-mount \
-			       python3 \
-			       python3-pip
-endif
-
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
 #		gluon relies on
