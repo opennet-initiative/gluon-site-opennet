@@ -11,6 +11,7 @@ features {
 	'ebtables-limit-arp',
 	'mesh-batman-adv-15',
 	'mesh-vpn-fastd',
+	'mesh-vpn-fastd-l2tp',
 	'respondd',
 	'status-page',
 	'web-advanced',
