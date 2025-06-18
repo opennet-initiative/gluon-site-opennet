@@ -1,17 +1,23 @@
 packages {
-	'tcpdump'
+	'-hostapd-mini',
+	'-hostapd-common',
 }
 
 features {
 	'authorized-keys',
-	'client-bridge',	-- warum
+	'client-bridge',
 	'mesh-olsrd',
-
-	-- 'mesh-vpn-fastd'
+	'wan-dnsmasq',
+	'l3roamd',
+	'logging',
 }
 
 if not device_class('tiny') then
+	packages {
+		'tcpdump',
+	}
+
 	features {
-		'tls'
+		'tls',
 	}
 end
