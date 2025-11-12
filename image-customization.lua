@@ -1,15 +1,16 @@
 packages {
 	'-hostapd-mini',
-	'-hostapd-common',
+	'wifi-scripts',
 }
 
 features {
+	'autoupdater',
 	'authorized-keys',
-	'client-bridge',
-	'mesh-olsrd',
-	'wan-dnsmasq',
-	'l3roamd',
 	'logging',
+	'mesh-olsrd',
+	'mesh-vpn-fastd',
+	'web-advanced',
+	'web-wizard',
 }
 
 if not device_class('tiny') then
