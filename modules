@@ -1,0 +1,9 @@
+# This file allows specifying additional repositories to use
+# when building gluon.
+#
+
+GLUON_SITE_FEEDS='community'
+
+PACKAGES_COMMUNITY_REPO=https://github.com/freifunk-gluon/community-packages.git
+PACKAGES_COMMUNITY_COMMIT=4a90cd221e8eba254ffc8dc5addbf3374b830415
+PACKAGES_COMMUNITY_BRANCH=master
