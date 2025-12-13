@@ -1,7 +1,4 @@
-packages {
-	'-hostapd-mini',
-	'wifi-scripts',
-}
+packages {'iwinfo'}
 
 features {
 	'alfred',
@@ -26,5 +23,6 @@ if not device_class('tiny') then
 
 	features {
 		'tls',
+		'wireless-encryption-wpa3',
 	}
 end
