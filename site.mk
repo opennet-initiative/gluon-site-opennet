@@ -1,14 +1,4 @@
-##	gluon site.mk makefile example
-
-##	DEFAULT_GLUON_RELEASE
-#		version string to use for images
-#		gluon relies on
-#			opkg compare-versions "$1" '>>' "$2"
-#		to decide if a version is newer or not.
-
-DEFAULT_GLUON_RELEASE := 0.6+exp$(shell date '+%Y%m%d')
-
-# Variables set with ?= can be overwritten from the command line
+##	gluon site.mk makefile
 
 ##	GLUON_RELEASE
 #		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
